@@ -32,18 +32,18 @@
             font-family: Times New Roman, serif;
             font-size: 2.8em;
             text-align: justify;
-            animation: crawl 170s linear infinite;
+            animation: crawl 180s linear infinite;
         }
 
         @keyframes crawl {
             0% {
                 top: 100%; /* Start at the bottom */
             }
-            82% {
-                top: -900%; /* Increased from -500% to -700% to ensure all text scrolls off */
+            83.3% {
+                top: var(--crawl-end-position, -900%); /* 150s / 180s = 83.3% */
             }
             100% {
-                top: -900%; /* Stay off-screen for the blank period */
+                top: var(--crawl-end-position, -900%); /* Stay off-screen for the blank period */
             }
         }
     </style>
