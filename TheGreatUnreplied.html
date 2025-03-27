@@ -11,7 +11,6 @@
             background: #aeaeae;
             overflow: hidden;
             height: 100vh;
-            /* Removed perspective to eliminate 3D effect */
         }
 
         .crawl-container {
@@ -24,25 +23,27 @@
         .crawl {
             position: absolute;
             top: 100%;
-            width: 50em; /* Reduced from 55em to accommodate larger text */
-            max-width: 80vw; /* Reduced from 85vw to keep text centered */
+            width: 50em;
+            max-width: 80vw;
             margin: 0 auto;
             left: 50%;
-            transform: translateX(-50%); /* Simplified transform, removed rotateX */
+            transform: translateX(-50%);
             color: #101321;
             font-family: Times New Roman, serif;
-            font-size: 2.8em; /* Increased from 2.2em to 3em for main text */
+            font-size: 2.8em;
             text-align: justify;
-            animation: crawl 140s linear infinite;
+            animation: crawl 170s linear infinite; /* Increased duration to 170s to include blank period */
         }
 
         @keyframes crawl {
             0% {
-                top: 100%;
-                opacity: 1;
+                top: 100%; /* Start at the bottom */
+            }
+            82% {
+                top: -300%; /* Text fully off-screen by 82% of the animation (140s / 170s) */
             }
             100% {
-                top: -300%;
+                top: -300%; /* Stay off-screen until the end of the animation */
             }
         }
     </style>
