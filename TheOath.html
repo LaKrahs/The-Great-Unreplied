@@ -25,22 +25,22 @@
         .crawl {
             position: absolute;
             top: 100%;
-            width: 60em; 
-            max-width: 90vw; 
+            width: 55em; /* Reduced from 60em to prevent overflow with larger text */
+            max-width: 85vw; /* Reduced from 90vw to keep text more centered */
             margin: 0 auto;
             left: 50%;
             transform-origin: 50% 100%;
             transform: rotateX(25deg) translateX(-50%);
             color: #ffd700;
             font-family: Arial, sans-serif;
-            font-size: 1.5em; /* Increased from 1.5em to 1.8em for main text */
+            font-size: 2.2em; /* Increased from 1.8em to 2.2em for main text */
             text-align: justify;
-            animation: crawl 130s linear infinite; 
+            animation: crawl 140s linear infinite;
         }
 
         .title {
             text-align: center;
-            font-size: 1.5em; /* Kept at 1.5em to maintain title size */
+            font-size: 1.8em; /* Increased from 1.5em to 1.8em for titles */
             margin-bottom: 1em;
             color: #ffd700;
         }
@@ -57,7 +57,7 @@
                 opacity: 1;
             }
             100% {
-                top: -300%; 
+                top: -300%;
                 opacity: 0;
             }
         }
