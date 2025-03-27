@@ -32,7 +32,7 @@
             font-family: Times New Roman, serif;
             font-size: 2.8em;
             text-align: justify;
-            animation: crawl 170s linear infinite; /* Increased duration to 170s to include blank period */
+            animation: crawl 170s linear infinite;
         }
 
         @keyframes crawl {
@@ -40,10 +40,10 @@
                 top: 100%; /* Start at the bottom */
             }
             82% {
-                top: -300%; /* Text fully off-screen by 82% of the animation (140s / 170s) */
+                top: -500%; /* Increased from -300% to -500% to ensure all text scrolls off */
             }
             100% {
-                top: -300%; /* Stay off-screen until the end of the animation */
+                top: -500%; /* Stay off-screen for the blank period */
             }
         }
     </style>
